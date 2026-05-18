@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Hub｜Talentostudio</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Talentostudio Research Hub</p>
+      <h1>研究文獻資料庫</h1>
+      <p class="lede">以研究題目為主軸，整理文獻、閱讀狀態、標籤與可回到原文的深度導讀頁。</p>
+    </div>
+    <a class="header-link" href="https://design-ethics.talentostudio.com" target="_blank" rel="noreferrer">開啟目前文獻網站</a>
+  </header>
+
+  <main>
+    <section class="topics-section" aria-labelledby="topics-title">
+      <div class="section-heading">
+        <p class="eyebrow">Research Topics</p>
+        <h2 id="topics-title">三個研究方向</h2>
+      </div>
+      <div id="topicCards" class="topic-grid"></div>
+    </section>
+
+    <section class="library-section" aria-labelledby="library-title">
+      <div class="section-heading">
+        <p class="eyebrow">Literature Library</p>
+        <h2 id="library-title">文獻索引</h2>
+      </div>
+
+      <div class="filters" aria-label="文獻篩選器">
+        <label>
+          <span>題目</span>
+          <select id="topicFilter">
+            <option value="all">全部題目</option>
+          </select>
+        </label>
+        <label>
+          <span>閱讀狀態</span>
+          <select id="statusFilter">
+            <option value="all">全部狀態</option>
+          </select>
+        </label>
+        <label>
+          <span>標籤</span>
+          <select id="tagFilter">
+            <option value="all">全部標籤</option>
+          </select>
+        </label>
+        <label class="search-field">
+          <span>搜尋</span>
+          <input id="searchInput" type="search" placeholder="搜尋作者、題名、摘要、標籤" />
+        </label>
+      </div>
+
+      <div class="library-meta">
+        <p id="resultCount">0 筆文獻</p>
+        <button id="resetFilters" type="button">清除篩選</button>
+      </div>
+
+      <div id="literatureList" class="literature-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>第二階段骨架：總站負責研究主題與文獻索引；單篇文獻頁負責原文、翻譯、旁註、筆記與標註。</p>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
